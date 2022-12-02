@@ -16,6 +16,8 @@ public class Aluno {
     private List<Nota> notas;
     private List<Habilidade> habilidades;
 
+    private Contato contato;
+
     public ObjectId getId() {
         return id;
     }
@@ -92,5 +94,13 @@ public class Aluno {
         notas.add(nota);
         aluno.setNotas(notas);
         return aluno;
+    }
+
+    public Contato getContato() {
+        return contato;
+    }
+
+    public void setContato(Contato contato) {
+        this.contato = contato;
     }
 }

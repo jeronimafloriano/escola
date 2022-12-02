@@ -1,9 +1,6 @@
 package escola.codecs;
 
-import escola.model.Aluno;
-import escola.model.Curso;
-import escola.model.Habilidade;
-import escola.model.Nota;
+import escola.model.*;
 import org.bson.*;
 import org.bson.codecs.Codec;
 import org.bson.codecs.CollectibleCodec;
@@ -32,6 +29,7 @@ public class AlunoCodec implements CollectibleCodec<Aluno> {
         Curso curso = aluno.getCurso();
         List<Habilidade> habilidades = aluno.getHabilidades();
         List<Nota> notas = aluno.getNotas();
+        Contato contato = aluno.getContato();
 
         Document document = new Document();
 
@@ -54,6 +52,16 @@ public class AlunoCodec implements CollectibleCodec<Aluno> {
             }
             document.put("notas", notasParaSalvar);
         }
+
+        List<Double> coordinates = new ArrayList<Double>();
+        for(Double location : contato.getCoordinates()){
+            coordinates.add(location);
+        }
+
+        document.put("contato", new Document()
+                .append("endereco" , contato.getEndereco())
+                .append("coordinates", coordinates)
+                .append("type", contato.getType()));
 
         this.codec.encode(writer, document, encoder);
     }
@@ -116,6 +124,13 @@ public class AlunoCodec implements CollectibleCodec<Aluno> {
                         documentHabilidade.getString("nivel")));
             }
             aluno.setHabilidades(habilidadesDoAluno);
+        }
+
+        Document contato = (Document) document.get("contato");
+        if (contato != null) {
+            String endereco = contato.getString("contato");
+            List<Double> coordinates = (List<Double>) contato.get("coordinates");
+            aluno.setContato(new Contato(endereco, coordinates));
         }
 
         return aluno;
