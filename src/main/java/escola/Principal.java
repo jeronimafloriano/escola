@@ -50,7 +50,7 @@ public class Principal {
                 Filters.eq("nome", "João da Silva"),
                 new Document("$set", new Document("nome", "João da Silva Santos")));*/
 
-        alunos.deleteOne(Filters.eq("nome", "João da Silva Santos"));
+        //alunos.deleteOne(Filters.eq("nome", "João da Silva Santos"));
 
 
         cliente.close();
