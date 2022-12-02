@@ -1,23 +1,0 @@
-
-Q	java:S125"<This block of commented-out lines of code should be removed.(Æ¯ù«
-N	java:S106 "9Replace this use of System.out or System.err by a logger.(öûíß
-]	java:S125-"<This block of commented-out lines of code should be removed.(î–’½şÿÿÿÿ8äËÁÌ0
-]	java:S1253"<This block of commented-out lines of code should be removed.(ËÛëÿÿÿÿÿ8¬›­ÁÌ0
-X	java:S1255"<This block of commented-out lines of code should be removed.(š•Š°8ÄÌ®ÁÌ0
-Q
-java:S1128"<Remove this unused import 'com.mongodb.MongoClientSettings'.(Œ˜©)
-Z
-java:S1128"=Remove this unused import 'com.mongodb.client.model.Filters'.(¯¸ÕÏ8ÅÌ®ÁÌ0
-^
-java:S1128	"HRemove this unused import 'org.bson.codecs.configuration.CodecRegistry'.(ƒöŒ’
-^
-java:S1128
-"CRemove this unused import 'org.bson.codecs.pojo.PojoCodecProvider'.(¢æØºıÿÿÿÿ
-O
-java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8çËÁÌ0
-E
-java:S1128"/Remove this unused import 'java.util.Calendar'.(ÿÛö´
-H
-java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8èËÁÌ0
-N
-java:S1128"8Remove this unused import 'java.util.GregorianCalendar'.(€û½
