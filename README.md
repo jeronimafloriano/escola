@@ -1,5 +1,5 @@
-# java-e-mongodb
-Integração de uma aplicação Java com o Banco NoSql MongoDb
+# Escola Mongo
+Integração de uma aplicação Java com o Banco NoSql MongoDB através da criação de um CODEC personalizado.
 
 
 # Nesse projeto foi utilizado Java 11 e Maven, Html, CSS e JS.
